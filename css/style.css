@@ -112,3 +112,26 @@ select:-webkit-autofill:focus {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+/* HEADER */
+.site-header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 2px;
+}
+
+.site-header__container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.site-header__link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 25px;
+  line-height: 22px;
+}
