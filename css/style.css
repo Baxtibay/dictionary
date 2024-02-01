@@ -118,6 +118,7 @@ select:-webkit-autofill:focus {
 .site-header {
   padding-top: 15px;
   padding-bottom: 15px;
+  border-top: 4px solid #000;
   background-color: #fff;
   box-shadow: 0 0 2px;
 }
@@ -134,4 +135,111 @@ select:-webkit-autofill:focus {
   color: var(--text-color);
   font-size: 25px;
   line-height: 22px;
+}
+
+
+/* .block::after {
+  position: absolute;
+  content: "1";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+} */
+
+/* MAIN SECTION  */
+.site-main {
+  flex-grow: 1;
+}
+
+/* DICTIONARY SECTION  */
+.dictionary-section__container {
+  display: flex;
+  position: relative;
+  padding-top: 40px;
+}
+
+.language-block {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.language-block:nth-child(1)  {
+  border-top-left-radius: 20px;
+  border-right: 0;
+  background-color: #fff;
+}
+
+.language-block:nth-child(2)  {
+  border-top-right-radius: 20px;
+  border-left: 0;
+}
+
+.language-block__language-name {
+  background-color: grey;
+  margin: 0;
+  text-align: center;
+}
+.language-block__inner {
+  padding: 20px;
+}
+
+.language-block__translate-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.language-block__language-search-input {
+  border: none;
+  height: 40px;
+}
+
+.language-block__word-translation {
+  margin-bottom: 40px;
+}
+.language-block__word-example {
+  border: 1px solid #000;
+  display: inline-block;
+}
+
+.language-block__text {
+  margin: 0;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .site-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .dictionary-section__container {
+    padding: 15px;
+    flex-wrap: wrap;
+  }
+
+  .language-block:nth-child(1)  {
+    border-top-right-radius: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+
+  .language-block:nth-child(2)  {
+    border-top-left-radius: 20px;
+    border-left: 1px solid rgba(0, 0, 0, 0.2)
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .language-block__language-name {
+    font-size: 22px;
+  }
+
+  .language-block__inner {
+    padding: 12px;
+    font-size: 13px;
+  }
 }
